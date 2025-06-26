@@ -21,7 +21,7 @@ This document outlines the **API testing approach** for the **Shopify App on Git
 ## **🔁 Workflow Diagram (Mermaid)**
 
 ```mermaid
-graph LR
+graph TD
     A["Shopify Store Owner"] --> B["Authenticate"]
     B --> C["Token Generated"]
     C --> D["GET /api/products"]
@@ -225,6 +225,7 @@ Once uploaded, copy your **GitHub repository URL** and share it on Confluence an
 ---
 
 🚀 **Do you approve this format?** Let me know if you'd like modifications before finalizing it for GitHub! 🔥
+
 
 
 
