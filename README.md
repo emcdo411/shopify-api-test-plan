@@ -1,7 +1,3 @@
-Here’s a **Confluence-ready User Stories & API Test Document** for the **Shopify App on GitHub Marketplace**, designed for your **DevOps team** to validate the API. It includes **user stories, acceptance criteria, API request/response formats, and pass/fail test scenarios**.  
-
----
-
 ## **📌 User Stories / API Test Plan – Shopify App on GitHub Marketplace**  
 
 ### **🚀 Overview**  
@@ -19,6 +15,20 @@ This document outlines the **API testing approach** for the **Shopify App on Git
 ![Confluence](https://img.shields.io/badge/-Confluence-172B4D?logo=confluence)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript)
 ![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js)
+
+---
+
+## **🔁 Workflow Diagram**
+
+```mermaid
+graph TD
+    A[Shopify Store Owner] -->|Login/API Key| B(Authenticate)
+    B -->|Generate Token| C[Auth Token]
+    C -->|GET| D[Retrieve Products]
+    C -->|PUT| E[Update Product Pricing]
+    D -->|Return JSON Product List| F[GitHub Marketplace App]
+    E -->|Return Confirmation| F
+```
 
 ---
 
@@ -213,4 +223,5 @@ Once uploaded, copy your **GitHub repository URL** and share it on Confluence an
 ---
 
 🚀 **Do you approve this format?** Let me know if you'd like modifications before finalizing it for GitHub! 🔥
+
 
