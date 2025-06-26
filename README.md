@@ -24,8 +24,8 @@ This document outlines the **API testing approach** for the **Shopify App on Git
 graph TD
     A[Shopify Store Owner] -->|Login/API Key| B(Authenticate)
     B -->|Generate Token| C[Auth Token]
-    C -->|GET| D[Retrieve Products]
-    C -->|PUT| E[Update Product Pricing]
+    C -->|GET /api/products| D[Retrieve Products]
+    C -->|PUT /api/products/update| E[Update Product Pricing]
     D -->|Return JSON Product List| F[GitHub Marketplace App]
     E -->|Return Confirmation| F
 ```
