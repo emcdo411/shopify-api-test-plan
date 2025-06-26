@@ -21,13 +21,19 @@ This document outlines the **API testing approach** for the **Shopify App on Git
 ## **🔁 Workflow Diagram (Mermaid)**
 
 ```mermaid
-flowchart LR
-  A["Shopify Store Owner"] --> B["Authenticate: Login/API Key"]
-  B --> C["Token Generated"]
-  C --> D["GET /api/products"]
-  C --> E["PUT /api/products/update"]
-  D --> F["GitHub Marketplace App (JSON Returned)"]
+flowchart TD
+  A(["Shopify Store Owner"]) --> B(["Login w/ API Key"])
+  B --> C(["Token Generated"])
+  C --> D(["GET /api/products"])
+  C --> E(["PUT /api/products/update"])
+  D --> F(["GitHub Marketplace App"])
   E --> F
+  style A fill:#f0f8ff,stroke:#333,stroke-width:1px
+  style B fill:#d3eaff,stroke:#333,stroke-width:1px
+  style C fill:#add8e6,stroke:#333,stroke-width:1px
+  style D fill:#b0e0e6,stroke:#333,stroke-width:1px
+  style E fill:#b0e0e6,stroke:#333,stroke-width:1px
+  style F fill:#e6f7ff,stroke:#333,stroke-width:1px
   D -->|"Product List"| F
   E -->|"Price Confirmation"| F
 ```
@@ -225,6 +231,7 @@ Once uploaded, copy your **GitHub repository URL** and share it on Confluence an
 ---
 
 🚀 **Do you approve this format?** Let me know if you'd like modifications before finalizing it for GitHub! 🔥
+
 
 
 
