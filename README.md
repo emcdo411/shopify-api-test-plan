@@ -9,6 +9,19 @@ This document outlines the **API testing approach** for the **Shopify App on Git
 
 ---
 
+## **🔧 Tech Stack**
+
+![Shopify](https://img.shields.io/badge/-Shopify-96bf48?logo=shopify)
+![GitHub Marketplace](https://img.shields.io/badge/-GitHub%20Marketplace-181717?logo=github)
+![REST API](https://img.shields.io/badge/-REST%20API-FF6F00?logo=api)
+![JSON](https://img.shields.io/badge/-JSON-292929?logo=json)
+![Postman](https://img.shields.io/badge/-Postman-FF6C37?logo=postman)
+![Confluence](https://img.shields.io/badge/-Confluence-172B4D?logo=confluence)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript)
+![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js)
+
+---
+
 ## **🔹 1. User Story: Authenticate Shopify Store**  
 
 ### **📖 User Story**  
@@ -67,10 +80,10 @@ This document outlines the **API testing approach** for the **Shopify App on Git
 ### **📤 API Request & Response**  
 
 #### **🔹 Request (GET /api/products)**
-```json
-{
-  "auth_token": "generated_auth_token_here"
-}
+```http
+GET /api/products HTTP/1.1
+Authorization: Bearer generated_auth_token_here
+Content-Type: application/json
 ```
 
 #### **🔹 Response (Success - 200 OK)**
@@ -164,11 +177,24 @@ This document outlines the **API testing approach** for the **Shopify App on Git
 
 ---
 
-## **📌 Conclusion**  
-This document provides a structured **API test plan** for the **Shopify App on GitHub Marketplace**. It ensures that:  
-✅ Authentication is secure.  
-✅ Product data is retrievable.  
-✅ Price updates function correctly.  
+## **📌 Additional Recommendations**  
+
+### 🔒 **Security Best Practices**
+- Always pass authentication tokens in the `Authorization` header, not in the body.
+- Use HTTPS for all endpoints.
+- Rotate API keys periodically and use scopes for fine-grained access control.
+
+### 🔁 **Rate Limiting**
+- Consider testing with frequent calls to confirm if rate limiting or throttling occurs.
+- Include headers in response like `X-RateLimit-Remaining` for observability.
+
+### ⚠️ **Error Logging and Monitoring**
+- Capture logs of failed API calls with timestamps.
+- Monitor for abnormal patterns like spikes in 500-series responses.
+
+### 🔐 **Token Lifecycle**
+- Document time-to-live (TTL) for auth tokens.
+- Handle refresh token workflows if applicable.
 
 ---
 
@@ -186,4 +212,5 @@ Once uploaded, copy your **GitHub repository URL** and share it on Confluence an
 
 ---
 
-🚀 **Do you approve this format?** Let me know if you'd like modifications before finalizing it for GitHub! 🔥# shopify-api-test-plan
+🚀 **Do you approve this format?** Let me know if you'd like modifications before finalizing it for GitHub! 🔥
+
