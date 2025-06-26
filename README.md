@@ -18,30 +18,18 @@ This document outlines the **API testing approach** for the **Shopify App on Git
 
 ---
 
-## **🔁 Workflow Diagram (Rendered in RStudio)**
+## **🔁 Workflow Diagram (Mermaid)**
 
-```r
-library(DiagrammeR)
-
-grViz("
-digraph shopify_api_flow {
-  graph [layout = dot, rankdir = LR]
-
-  node [fontname = Helvetica, shape = box, style = filled, fillcolor = grey90]
-  A [label = 'Shopify Store Owner', shape = ellipse, fillcolor = grey85]
-  B [label = 'Authenticate\n(Login/API Key)', fillcolor = grey80]
-  C [label = 'Token\n(Generated)', fillcolor = grey75]
-  D [label = 'GET: /api/products', fillcolor = grey70]
-  E [label = 'PUT: /api/products/update', fillcolor = grey70]
-  F [label = 'GitHub Marketplace App\n(JSON Returned)', shape = ellipse, fillcolor = grey60]
-
-  A -> B
-  B -> C
-  C -> D
-  C -> E
-  D -> F [label = 'Product List']
-  E -> F [label = 'Price Confirmation']
-}")
+```mermaid
+graph LR
+    A[Shopify Store Owner] --> B[Authenticate (Login/API Key)]
+    B --> C[Token Generated]
+    C --> D[GET /api/products]
+    C --> E[PUT /api/products/update]
+    D --> F[GitHub Marketplace App\n(JSON Returned)]
+    E --> F
+    D -->|Product List| F
+    E -->|Price Confirmation| F
 ```
 
 ---
@@ -237,6 +225,7 @@ Once uploaded, copy your **GitHub repository URL** and share it on Confluence an
 ---
 
 🚀 **Do you approve this format?** Let me know if you'd like modifications before finalizing it for GitHub! 🔥
+
 
 
 
