@@ -28,14 +28,15 @@ flowchart TD
   C --> E(["PUT /api/products/update"])
   D --> F(["GitHub Marketplace App"])
   E --> F
-  style A fill:#f0f8ff,stroke:#333,stroke-width:1px
-  style B fill:#d3eaff,stroke:#333,stroke-width:1px
-  style C fill:#add8e6,stroke:#333,stroke-width:1px
-  style D fill:#b0e0e6,stroke:#333,stroke-width:1px
-  style E fill:#b0e0e6,stroke:#333,stroke-width:1px
-  style F fill:#e6f7ff,stroke:#333,stroke-width:1px
   D -->|"Product List"| F
   E -->|"Price Confirmation"| F
+
+  style A fill:#1e3a8a,color:#ffffff,stroke:#333,stroke-width:1px
+  style B fill:#1e40af,color:#ffffff,stroke:#333,stroke-width:1px
+  style C fill:#1d4ed8,color:#ffffff,stroke:#333,stroke-width:1px
+  style D fill:#2563eb,color:#ffffff,stroke:#333,stroke-width:1px
+  style E fill:#2563eb,color:#ffffff,stroke:#333,stroke-width:1px
+  style F fill:#3b82f6,color:#ffffff,stroke:#333,stroke-width:1px
 ```
 
 ---
@@ -231,6 +232,7 @@ Once uploaded, copy your **GitHub repository URL** and share it on Confluence an
 ---
 
 🚀 **Do you approve this format?** Let me know if you'd like modifications before finalizing it for GitHub! 🔥
+
 
 
 
